@@ -5,7 +5,8 @@
 { config, pkgs, lib, environment, ... }:
 
 let
-  myPkgs = (import ../../pkgs);
+  myPkgs = import ../../pkgs {inherit pkgs;};
+  blog = myPkgs.blog;
 in {
   services.openssh.enable = true;
 
@@ -20,7 +21,7 @@ in {
     virtualHosts."blog.lunef.xyz".extraConfig = ''
       encode gzip
       file_server
-      root * ${myPkgs.blog}
+      root * ${blog}
     '';
   };
 

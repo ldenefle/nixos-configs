@@ -1,8 +1,7 @@
 {
-  "url": "https://tulpa.dev/cadey/dwm.git",
-  "rev": "master",
-  "sha256": "0svwj6l18k8igvpyzq1d3dj1zixsgn4fkqggqlpqrrxk97804fqc",
-  "fetchSubmodules": false,
+  "url": "https://github.com/ldenefle/blog.lunef.xyz",
+  "sha256": "sha256-LFw+iIW8H7l9cthORVo2N4gShHlQXs+ZZQ74bdHSCUk=",
+  "fetchSubmodules": true,
   "deepClone": false,
   "leaveDotGit": false
 }

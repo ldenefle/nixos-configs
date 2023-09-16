@@ -1,4 +1,4 @@
 { pkgs, ... }:
 {
-  blog = pkgs.CallPackage ./blog;
+  blog = pkgs.callPackage ./blog/default.nix {};
 }
