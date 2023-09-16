@@ -7,7 +7,6 @@ in {
   users.users.lucas = {
     isNormalUser = true;
 
-    shell = pkgs.zsh;
     home = "/home/lucas";
 
     extraGroups = [ "wheel" ];

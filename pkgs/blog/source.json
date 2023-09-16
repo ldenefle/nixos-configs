@@ -1,0 +1,8 @@
+{
+  "url": "https://tulpa.dev/cadey/dwm.git",
+  "rev": "master",
+  "sha256": "0svwj6l18k8igvpyzq1d3dj1zixsgn4fkqggqlpqrrxk97804fqc",
+  "fetchSubmodules": false,
+  "deepClone": false,
+  "leaveDotGit": false
+}

@@ -24,3 +24,7 @@ I'll push soon more of my homelab infrastructure on this project.
 nix-shell -p nixfmt fd --command "fd nix . -X nixfmt {}"
 ```
 
+### Generate base image
+ 
+A nix derivation is provided to generate a base image for DigitalOcean in `base/digitalocean`. The `result/nixos.qcow2.gz` can be uploaded as an image on DigitalOcean.
+
