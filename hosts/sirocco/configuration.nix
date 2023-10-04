@@ -16,12 +16,29 @@ in {
 
   environment.systemPackages = with pkgs; [ python3 ];
 
+  services.radicale = {
+    enable = true;
+    settings = {
+      server = { hosts = [ "0.0.0.0:5232" ]; };
+      auth = {
+        type = "htpasswd";
+        htpasswd_filename = "/etc/radicale/users";
+        htpasswd_encryption = "md5";
+      };
+      storage = { filesystem_folder = "/var/lib/radicale/collections"; };
+    };
+  };
+
   services.caddy = {
     enable = true;
     virtualHosts."blog.lunef.xyz".extraConfig = ''
       encode gzip
       file_server
       root * ${blog}
+    '';
+
+    virtualHosts."calendar.lunef.xyz".extraConfig = ''
+      reverse_proxy localhost:5232
     '';
   };
 
