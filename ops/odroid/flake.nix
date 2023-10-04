@@ -17,7 +17,8 @@
         }
       ];
     };
-    images.odroid-hc2 = nixosConfigurations.odroid-hc2.config.system.build.sdImage;
+    images.odroid-hc2 =
+      nixosConfigurations.odroid-hc2.config.system.build.sdImage;
   };
 }
 

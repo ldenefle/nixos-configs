@@ -1,4 +1,1 @@
-{ pkgs, ... }:
-{
-  blog = pkgs.callPackage ./blog/default.nix {};
-}
+{ pkgs, ... }: { blog = pkgs.callPackage ./blog/default.nix { }; }
