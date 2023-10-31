@@ -11,6 +11,8 @@ in {
 
     extraGroups = [ "wheel" ];
     openssh.authorizedKeys.keyFiles = [ (fetchKeys "ldenefle") ];
+
+    packages = with pkgs; [ htop fd silver-searcher ];
   };
 
   # Use my SSH keys for logging in as root.

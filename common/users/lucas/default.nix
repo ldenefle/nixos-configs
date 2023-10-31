@@ -22,6 +22,7 @@ in {
 
   programs.tmux.enable = true;
   programs.vim.enable = true;
+
   home.stateVersion = "22.11";
 
   home.packages = [ say-hello ];

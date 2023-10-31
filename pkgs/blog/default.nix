@@ -5,7 +5,6 @@ stdenv.mkDerivation rec {
   version = "0.1";
   src = fetchgit (builtins.fromJSON (builtins.readFile ./source.json));
 
-  buildInputs = [ hugo ];
   dontConfigure = true;
 
   # Copy source into working directory and 
